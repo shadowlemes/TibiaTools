@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TibiaTools.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <!--este campo para imagem de fundo-->
+            <Image Source="tibiaold.jpg"
+                   Opacity="0.10"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"/>
+            
+            <VerticalStackLayout            
+                Padding="10,0"
+                Margin="0,250,0,0"               
+                Spacing="25">
+                
+            <Image
+                Source="party.png"                               
+                HeightRequest="350"
+                Aspect="AspectFit"
+                Opacity="0.80"
+                SemanticProperties.Description="Party Tibia" />
+
+            <Label
+                Text="Calculo de level Máximo e Mínimo para sharear"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+
+            <Entry 
+                x:Name="txt_level"
+                Placeholder="level do jogador" 
+                HeightRequest="80"
+                WidthRequest="180" 
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"/>
+
+            <Button 
+                x:Name="btn_pressione" 
+                Text="Calcular" 
+                HeightRequest="50" 
+                WidthRequest="150" 
+                BackgroundColor="White" 
+                Clicked="btn_pressione_Clicked"/>
+
+
+        </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
