@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TibiaTools.ConversorTC">
+
+    <Grid RowDefinitions="*" >
+        <Image Source="tibiaold.jpg"
+                   Opacity="0.10"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"/>
+
+        <VerticalStackLayout            
+                Padding="100"
+                Margin="0,150,0,0"               
+                Spacing="25">
+          
+        <Image
+                Source="tibiacoins.png"                               
+                HeightRequest="250"
+                Aspect="AspectFit"
+                Opacity="0.80"
+                SemanticProperties.Description="Tibia Coins" />
+
+<!--Todos os Entry deste bloco são para captura do input do usuário-->
+          <Entry
+              x:Name="txt_tcserver"
+              Placeholder="Valor TC do servidor"
+              HeightRequest="80"
+              WidthRequest="180"
+              HorizontalTextAlignment="Center"
+              HorizontalOptions="Center"
+              MaxLength ="6"/>
+          
+          <HorizontalStackLayout
+              HorizontalOptions="Center"
+              Spacing="80" 
+          Padding="10">
+            
+          <Entry
+                x:Name="txt_gold"
+                Placeholder="Valor em gold"
+                HeightRequest="80"
+                WidthRequest="180"                
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextChanged="Txt_ResultadoGold"
+                VerticalTextAlignment ="Center"
+                MaxLength ="10"
+                />
+          
+            
+          <Entry
+                x:Name="txt_reais"
+                Placeholder="Valor em R$"
+                HeightRequest="80"
+                WidthRequest="180"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                MaxLength ="10"/>
+
+          <Entry
+                x:Name="txt_tibiacoins"
+                Placeholder="Valor em Tibia Coins"
+                HeightRequest="80"
+                WidthRequest="180"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                MaxLength ="10"/>
+
+          </HorizontalStackLayout>
+
+          <!--Espaço apenas para apresentar resultado esperado-->
+          <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="80"
+                Padding="10">
+
+            <Entry
+                  x:Name="txt_resultadogold"
+                  HeightRequest="80"
+                  WidthRequest="180"
+                  HorizontalTextAlignment="Center"
+                  HorizontalOptions="Center"
+                  IsReadOnly="true"/>
+
+            <Entry
+                  x:Name="txt_resultadoreais"
+                  HeightRequest="80"
+                  WidthRequest="180"
+                  HorizontalTextAlignment="Center"
+                  HorizontalOptions="Center"
+                  IsReadOnly="true"/>
+
+            <Entry
+                  x:Name="txt_resultadotibiacoins"
+                  HeightRequest="80"
+                  WidthRequest="180"
+                  HorizontalTextAlignment="Center"
+                  HorizontalOptions="Center"
+                  IsReadOnly="true"/>
+
+          </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+      
+    </Grid>
+</ContentPage>

@@ -4,12 +4,27 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TibiaTools"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="TibiaTools">
+    
+    <FlyoutItem 
+        Title="Calculadora" 
+        IsEnabled="True" 
+        FlyoutDisplayOptions="AsMultipleItems">
+        
+        <ShellContent
+            Title="Calculadora de Level"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="CalculadoraDeLevel" />
+    </FlyoutItem>
 
+    <FlyoutItem 
+        Title="Conversor TC" 
+        IsEnabled="True" 
+        FlyoutDisplayOptions="AsMultipleItems">
     <ShellContent
-        Title="Calculadora de level"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="CalculadoraDeLevel" />
-
+            Title="Conversor TC"
+            ContentTemplate="{DataTemplate local:ConversorTC}"
+            Route="ConversorTC" />
+    </FlyoutItem>
 </Shell>
